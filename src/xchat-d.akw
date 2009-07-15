@@ -1,0 +1,83 @@
+<?xml ?>
+<workspace name="xchat-d" expanded="1" config="debug" compiler="" active="xcdscript">
+	<searchwords>
+		<source>
+			<entry>g_xchat_hook_fd</entry>
+			<entry>list_get</entry>
+			<entry>get_list</entry>
+			<entry>get_info</entry>
+			<entry>&quot;Date</entry>
+			<entry>Data</entry>
+			<entry>_Text</entry>
+			<entry>darray</entry>
+			<entry>_fd</entry>
+			<entry>xchat_list_fields</entry>
+		</source>
+		<dest>
+			<entry>arglist.length==</entry>
+			<entry>var </entry>
+			<entry>char</entry>
+		</dest>
+	</searchwords>
+	<openedfiles>
+		<entry projectpath="c:\dev\d.xchat" path="c:\dev\d.xchat\xchat-d.d" pos="1859" type="editor" active="1">
+			<normalpos x="88" y="88" width="753" height="408" />
+			<state visible="1" ontop="0" state="maximized" />
+		</entry>
+		<entry projectpath="c:\dev\d.xchat" path="xchatplugin.d" pos="1207" type="editor">
+			<normalpos x="66" y="66" width="753" height="408" />
+			<state visible="1" ontop="0" state="normal" />
+		</entry>
+		<entry projectpath="" path="E:\test.ds" pos="77" type="editor">
+			<normalpos x="110" y="110" width="753" height="408" />
+			<state visible="1" ontop="0" state="normal" />
+		</entry>
+		<entry projectpath="" path="C:\dev\ak_win\ide\scripter_list.d" pos="4340" type="editor">
+			<normalpos x="154" y="154" width="753" height="408" />
+			<state visible="1" ontop="0" state="normal" />
+		</entry>
+	</openedfiles>
+	<project name="xcdscript" expanded="1" active="debug" basedir="c:\dev\d.xchat">
+		<configs>
+			<entry name="debug" compiler="dmd" workdir="" skipsteps="" arguments="" captureoutput="0" disabled="0">
+				<prepostbuild />
+			</entry>
+		</configs>
+		<settings>
+			<config name="debug">
+				<dmd_linker>
+					<output>
+						<addfile>
+							<value>c:\dev\d.xchat\xchat-d.def</value>
+						</addfile>
+						<outputfile>
+							<value>c:\dev\d.xchat\output\$workspace.workingproject$null().dll</value>
+						</outputfile>
+					</output>
+				</dmd_linker>
+				<dmd_compiler>
+					<output>
+						<warnings>
+							<value>1</value>
+						</warnings>
+						<objdir>
+							<value>c:\dev\d.xchat\output</value>
+						</objdir>
+						<outputfile>
+							<value>c:\dev\d.xchat\output\$file.project$file.folders(_,_,$null)_$getfilename($file.path)$.obj</value>
+						</outputfile>
+					</output>
+				</dmd_compiler>
+			</config>
+		</settings>
+		<file name="xchat-d.d" path="c:\dev\d.xchat\xchat-d.d" />
+		<file name="xchat-d.def" path="c:\dev\d.xchat\xchat-d.def" />
+		<file name="xchatplugin.d" path="xchatplugin.d">
+			<configs>
+				<entry name="debug" skipsteps="" disabled="0">
+					<prepostbuild />
+				</entry>
+			</configs>
+		</file>
+	</project>
+</workspace>

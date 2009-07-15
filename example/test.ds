@@ -1,0 +1,63 @@
+var huk;
+
+function xchat_plugin_init()
+{
+	//xchat_set_context(xchat_find_context(null,"#sdasdasdasd"));
+	//xchat_send_modes(new Array("thegza","bobef"),0,'-','o');
+	//var ret=xchat_list_get("users");
+	//xchat_print(ret[0].nick);
+	//huks=xchat_hook_server("PART",XCHAT_PRI_NORM,"hook_server");
+	huk=xchat_hook_command("TESTCMD",XCHAT_PRI_NORM,"hook_cmd","TESTCMD: help");
+	return 1;
+}
+
+var time=0;
+
+function hook_timer()
+{
+	time++;
+	xchat_print("timer ticks: "+time);
+	if(time<3) return 1;
+	else
+	{
+		xchat_print("Removing hook for TESTCMD");
+		xchat_unhook(huk);
+		xchat_print("End of tests");
+		return 0;
+	}
+}
+
+var hukp;
+var huks;
+
+function hook_server(p1,p2)
+{
+	xchat_print("captured server event (removing hook)! parameters: "+p1+" "+p2);
+	xchat_unhook(huks);
+}
+
+function hook_print(p1,p2)
+{
+	xchat_print("captured print event (removing hook)! parameters: "+p1+" "+p2);
+	xchat_unhook(hukp);
+}
+
+function hook_cmd(p1,p2,p3)
+{
+	xchat_print("Running DMDScript for X-Chat 2 tests ("+SCRIPT_PATH+"):");
+	xchat_print("hooking print:");
+	hukp=xchat_hook_print("Change Nick",XCHAT_PRI_NORM,"hook_print");
+	xchat_print("emiting a change nick text event:");
+	xchat_emit_print("Change Nick","DMDScript","works!");
+	xchat_print("testing set(get-context): "+xchat_set_context(xchat_get_context()));
+	xchat_print("testing get prefs: ");
+	xchat_print("irc_nick1="+xchat_get_prefs("irc_nick1"));
+	xchat_print("testing get info: ");
+	xchat_print("win_status="+xchat_get_info("win_status")+" inputbox="+xchat_get_info("inputbox"));
+	xchat_print("not stripped colours: "+"\00312Blue\003 \002Bold!\002");
+	xchat_print("stripped colours: "+xchat_strip("\00312Blue\003 \002Bold!\002",3));
+	xchat_print("nick name compare bobef/rules: "+xchat_nickcmp("bobef","rules"));
+	xchat_print("timer:");
+	xchat_hook_timer(1000,"hook_timer");
+	return XCHAT_EAT_ALL;
+}

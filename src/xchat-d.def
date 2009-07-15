@@ -1,0 +1,8 @@
+LIBRARY         MYDLL
+DESCRIPTION     'MyDll'
+EXETYPE			NT
+CODE            PRELOAD DISCARDABLE
+DATA            PRELOAD SINGLE
+EXPORTS
+  xchat_plugin_init
+  xchat_plugin_deinit
