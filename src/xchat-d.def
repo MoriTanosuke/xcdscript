@@ -1,6 +1,6 @@
-LIBRARY         MYDLL
-DESCRIPTION     'MyDll'
-EXETYPE			NT
+LIBRARY         "xcdscript.dll"
+DESCRIPTION     "javascript xchat plugin"
+EXETYPE			WINDOWS
 CODE            PRELOAD DISCARDABLE
 DATA            PRELOAD SINGLE
 EXPORTS

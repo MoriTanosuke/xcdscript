@@ -1,1 +1,1 @@
-dmd -ID:\Dokumente\workspace.xcdscript\dmdscript -ID:\Dokumente\xcdscript\src -ofxcdscript.dll xchat-d.d xchat-d.def"
+dmd -I/path/to/dmdscript -ofxcdscript.dll xchat-d.d xchat-d.def
