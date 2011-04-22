@@ -6,7 +6,12 @@ This is plugin for xchat that lets you execute javascript.
 Take a look into *example* to get a first impression.
 
 
-When the plugin is loaded it registers 4 commands - /XDS_LOAD "C:\myscript.ds" - loads myscript.ds and executes xchat_plugin_init(). /XDS_UNLOAD "C:\myscript.ds" unloads myscript.ds (if it is already loaded) and executes xchat_plugin_deinit(), also removes all hooks for this scripts./XDS_LIST will list all loaded scripts./XDS_APPEND "C:\myscript.ds" will append myscript.ds to the end of xcdscript.txt. xcdscript.txt lays in /home/user/.xchat2 for Linux or C:\Documents and Settings\yourusername\Application Data\X-Chat 2 for Silverex's version. You can edit the file manually. Each line is treated as path to script to be automatically loaded.
+When the plugin is loaded it registers 4 commands
+
+* /XDS_LOAD "C:\myscript.ds" - loads myscript.ds and executes xchat_plugin_init().
+* /XDS_UNLOAD "C:\myscript.ds" unloads myscript.ds (if it is already loaded) and executes xchat_plugin_deinit(), also removes all hooks for this scripts.
+* /XDS_LIST will list all loaded scripts.
+* /XDS_APPEND "C:\myscript.ds" will append myscript.ds to the end of xcdscript.txt. xcdscript.txt lays in */home/user/.xchat2`* for Linux or *C:\Documents and Settings\yourusername\Application Data\X-Chat 2* for Silverex's version. You can edit the file manually. Each line is treated as path to script to be automatically loaded.
 
 What?
 =====
@@ -26,14 +31,18 @@ This is free software and as any free software is provided as-is. Author will no
 
 xcdscript is free and open source. There are no restrictions. I.e. it uses "bobef license" which is: use without restrictions at your own risk. 
 
-Notes
-=====
-
 Platform notes
---------------
+==========
+
 This is the Win32 version. I don't have linux currently but the source doesn't contain any windoze specific code (except WinMain), so it shouldn't be a problem to compile it for linux. It is tested on X-Chat 2.4.5-2 compiled by Silverex.
+
 Installation
+========
 Extract the dll into X-Chat's plugin-s directory to load automatically or load it manually.
+
+
+Development
+=========
 
 Functions
 ---------
@@ -74,4 +83,3 @@ Predefined symbols
 * XCHAT_EAT_XCHAT
 * XCHAT_EAT_PLUGIN
 * XCHAT_EAT_ALL
-
